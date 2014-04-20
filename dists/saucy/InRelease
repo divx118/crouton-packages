@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Codename: saucy
+Date: Sun, 20 Apr 2014 09:04:54 UTC
+Architectures: amd64
+Components: main
+Description: 3.8 64bit kernel-headers for crouton package repo
+MD5Sum:
+ 0ebe8c98ad2f09342876a30d6e1b589e 2486 main/binary-amd64/Packages
+ 91b8a6b79edd2443a566e2c66e88e5dd 1121 main/binary-amd64/Packages.gz
+ d7230b51c7bdd7f72cdc3809bad8da09 99 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
+ 0ab313762070136d9e87d683eba3dea9 100 main/source/Release
+SHA1:
+ cd9f12a00fb4912f47346b35df080b74295a7971 2486 main/binary-amd64/Packages
+ f645b8992aab0d670985e0f169e33d23f28c622d 1121 main/binary-amd64/Packages.gz
+ 449404343c16abe8cde231f2bb02f1b56d131c4d 99 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
+ ce14d0e7392b49e64c52d5b08ff3154627347b48 100 main/source/Release
+SHA256:
+ eb7c63ddc543edf85cd8a0171b4504cbdc8cb0a6133de10afe6a1c3a29ac3a7d 2486 main/binary-amd64/Packages
+ cc4777ae91ccf95ac841139b659ec3d62c4f67ea8820e8a3f297c58549d09f81 1121 main/binary-amd64/Packages.gz
+ b594cae2b646ef1b4d2bbb244c5ed9b7a15e319cdc2c1d68c6119e8dcbc1f127 99 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
+ 84df49b7b83718c151add0de4035ad1d8cddfbb3e3e46de39905cdfe6128e980 100 main/source/Release
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJTU427AAoJEEKe6eeHTAxZahQIALsvsq1fhyLd6AMum6kiqDNY
+71D3KPHz7gSnlEbIMwk0ZcftFA1gKaqq1vf1xZhkCyFBZ5f0mfhuYoGXECMeorwh
+C0gzFqRdHdhyqb45ll++pZHz3dbWNTuCVAcmGoKmQ63c9gsojsalVOG+jZTF5UhI
+4x9G/onR2FjvsCfTEYVIY3KgjSmCXM/IBywouxN/wmi5Hm0AD9QIypsVyLp5YnPj
+zIq4a4Di2i5r2ceqbZxVnfocV1E9em3B0PqnPYVu7GAspOz4ElVfaAVC0/2eRUtI
+y5rSuxCYDD/nBW0hhRhotfWIrbSsvyjfOqN/NLcyR5u2GoZili4jUhQ1W5tRH8M=
+=I4C8
+-----END PGP SIGNATURE-----

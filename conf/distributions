@@ -1,0 +1,15 @@
+Origin: apt.github.com
+Label: apt repository
+Codename: precise
+Architectures: amd64 source
+Components: main
+Description: 3.8 64bit kernel-headers for crouton package repo
+SignWith: yes
+Pull: precise
+
+Codename: saucy
+Architectures: amd64 source
+Components: main
+Description: 3.8 64bit kernel-headers for crouton package repo
+SignWith: yes
+Pull: saucy

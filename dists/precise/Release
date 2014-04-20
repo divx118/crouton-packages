@@ -1,0 +1,28 @@
+Origin: apt.github.com
+Label: apt repository
+Codename: precise
+Date: Sun, 20 Apr 2014 09:04:37 UTC
+Architectures: amd64
+Components: main
+Description: 3.8 64bit kernel-headers for crouton package repo
+MD5Sum:
+ 0ebe8c98ad2f09342876a30d6e1b589e 2486 main/binary-amd64/Packages
+ 91b8a6b79edd2443a566e2c66e88e5dd 1121 main/binary-amd64/Packages.gz
+ 03f06cb68f83f47dd440d5f349bfba5a 144 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
+ 7401110d995a65e7197048710fd4a414 145 main/source/Release
+SHA1:
+ cd9f12a00fb4912f47346b35df080b74295a7971 2486 main/binary-amd64/Packages
+ f645b8992aab0d670985e0f169e33d23f28c622d 1121 main/binary-amd64/Packages.gz
+ 6a8dc1f704f8cf354c8580dd4ed67f4446d550e4 144 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
+ 36317de05f6b843996d7eefd561eaf7968dfdca2 145 main/source/Release
+SHA256:
+ eb7c63ddc543edf85cd8a0171b4504cbdc8cb0a6133de10afe6a1c3a29ac3a7d 2486 main/binary-amd64/Packages
+ cc4777ae91ccf95ac841139b659ec3d62c4f67ea8820e8a3f297c58549d09f81 1121 main/binary-amd64/Packages.gz
+ 7e14ceb74075843ad9964277e6975751c93d511a688e422e33dc831e00c46afd 144 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
+ e74c7e5e046f85309a2c34196ccc2060d9ebbc68032bac3e79cf99f918409196 145 main/source/Release
