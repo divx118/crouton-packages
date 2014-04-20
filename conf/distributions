@@ -8,7 +8,7 @@ SignWith: yes
 Pull: precise
 
 Codename: saucy
-Architectures: amd64 i386
+Architectures: amd64
 Components: main
 Description: 3.8 64bit kernel-headers for crouton package repo
 SignWith: yes
