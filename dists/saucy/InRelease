@@ -2,10 +2,10 @@
 Hash: SHA1
 
 Codename: saucy
-Date: Sun, 20 Apr 2014 12:10:33 UTC
-Architectures: amd64 i386
+Date: Tue, 22 Apr 2014 19:25:54 UTC
+Architectures: amd64 i386 armhf
 Components: main
-Description: 3.8 64bit kernel-headers for crouton package repo
+Description: 3.8.11 kernel-headers for crouton package repo
 MD5Sum:
  0ebe8c98ad2f09342876a30d6e1b589e 2486 main/binary-amd64/Packages
  91b8a6b79edd2443a566e2c66e88e5dd 1121 main/binary-amd64/Packages.gz
@@ -13,6 +13,9 @@ MD5Sum:
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
  96cdac82eb2408cb3d1baed98508c5ab 98 main/binary-i386/Release
+ d13d6204259169d852763292eb67fdeb 2441 main/binary-armhf/Packages
+ 71456b01e63eb22834fbcbe3600f1493 1116 main/binary-armhf/Packages.gz
+ 322417595602995c6d7d71645ca76acb 96 main/binary-armhf/Release
 SHA1:
  cd9f12a00fb4912f47346b35df080b74295a7971 2486 main/binary-amd64/Packages
  f645b8992aab0d670985e0f169e33d23f28c622d 1121 main/binary-amd64/Packages.gz
@@ -20,6 +23,9 @@ SHA1:
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
  8b3e080bc476400fce8da3466736549f7da8bde7 98 main/binary-i386/Release
+ a420d5bdcc8367f4baeac307c29e4a9ed642a7af 2441 main/binary-armhf/Packages
+ edc5908b9c65ca6fe805313850b84f878d2e9f94 1116 main/binary-armhf/Packages.gz
+ 4b5209ed57bde5b946144f46c65222799b7a4e01 96 main/binary-armhf/Release
 SHA256:
  eb7c63ddc543edf85cd8a0171b4504cbdc8cb0a6133de10afe6a1c3a29ac3a7d 2486 main/binary-amd64/Packages
  cc4777ae91ccf95ac841139b659ec3d62c4f67ea8820e8a3f297c58549d09f81 1121 main/binary-amd64/Packages.gz
@@ -27,14 +33,17 @@ SHA256:
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
  212f4bc04244bedc446510c9eaea1b55144b0959f43bc8727c8c1e7794d40221 98 main/binary-i386/Release
+ c932f578454c57ad07d08587c3bb0eee45882b13ced1d02b82af69eb9c7c383c 2441 main/binary-armhf/Packages
+ 6205821236e36abc56c88177a71a1de7730b98ad5d4d434502af8ded3834046a 1116 main/binary-armhf/Packages.gz
+ 70fcd7e0f04f04972519e56e217279cc0689a1564fb16c78c2bb216987c1a8c5 96 main/binary-armhf/Release
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJTU7k9AAoJEEKe6eeHTAxZG30H/0zsS+OusuSNKrbGdQjP3MlY
-txHdsBZv9cw+IBHuFDuTlPc0qxFWAE4kQICDhI8KPPut2poiMOyrJxU7K794Y7QH
-hELZRu44R1ONIfWrj5VgZkgbb4Wc3RoYN9myoy4CgT0HpRQo/zmuFPq3EKUrw5M0
-T7rfrB4+PlF//rT/+VmQF73RVwykoOuct7q7Q91l0WdZp5arTLQpTvLWGwZ2JdpQ
-CzFZaRloj0gyJPoGGD1suhYQd9tEjIwd8JH+IQb0UBhuDjmdu9iIFA8WXWO7qFzw
-k2KYczpFm/pz2DSVMtUAHayKU17b8BMaGZ9PAoaKUKYIpUj0sro3EXd6EdrliY8=
-=q1/+
+iQEcBAEBAgAGBQJTVsJHAAoJEEKe6eeHTAxZnZkIAL0NSg9yXt9rGhBHb3JOuVZq
+vZamwmTpE4FvTPP3Nl/CthWRPaFkfwhahywbg0bYqMUitWNCYltDrldfQZJKXe+N
+2bv8G4stil5zBlJQbToo1iphDXRXb22Ozd6ZIJqrUNn1F5c0O4cOUTZwkRDF8bap
+apXi9D4J+iwQuA1qH86bJBwu50MG5eZGEdg/i+kQvWsTVzHqOarby9mMLo44Qh71
+uDIjv/xciNLQkViHtHqSLsjbe0MmQrHOkaEYwywZQTTc7V5yiaKqEPMsmRgh0dAD
++FZP/NTGcJRlD6DBqBopQ3V+xiRMkqtLk37+5aRTXhkjnJ6l+f4Z3167UPBBJXc=
+=ZNvb
 -----END PGP SIGNATURE-----
