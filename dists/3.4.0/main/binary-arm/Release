@@ -1,0 +1,3 @@
+Component: main
+Architecture: arm
+Description: 3.4.0 kernel-headers for crouton package repo

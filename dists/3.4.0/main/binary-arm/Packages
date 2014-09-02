@@ -1,0 +1,59 @@
+Package: linux-headers-3.4.0
+Source: linux-source-3.4.0
+Version: 20140831
+Architecture: arm
+Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
+Installed-Size: 36555
+Depends: libc6 (>= 2.14)
+Recommends: libc6-dev | libc-dev, gcc | c-compiler, make (>= 3.80-10), binutils (>= 2.12), util-linux (>= 2.10o)
+Suggests: module-init-tools (>= 0.9.10), e2fsprogs (>= 1.29)
+Provides: linux-headers, linux-headers-3.4
+Priority: optional
+Section: devel
+Filename: pool/main/l/linux-source-3.4.0/linux-headers-3.4.0_20140831_arm.deb
+Size: 5365784
+SHA256: a18c520cc6b86a672f9555477143f5b747b287085f66fd109497021aecf1fc53
+SHA1: 42c118a020487ccb0f3e8025955f33f1ce211279
+MD5sum: 015f16b6202b6f8cb463447e2f4c96e6
+Description: Header files related to Linux kernel, specifically,
+ version 3.4.0
+ .
+ This package provides kernel header files for sites
+ that want the latest kernel headers for version
+ 3.4.0.
+ Please read
+ /usr/share/doc/linux-headers-3.4.0/debian.README.gz
+ for details
+
+Package: linux-image-3.4.0
+Source: linux-source-3.4.0
+Version: 20140831
+Architecture: arm
+Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
+Installed-Size: 10437
+Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
+Depends: coreutils (>= 5.96)
+Suggests: fdutils, linux-doc-3.4.0 | linux-source-3.4.0, ksymoops, linux-image-3.4.0-dbg
+Provides: linux-image, linux-image-3.4
+Priority: optional
+Section: kernel
+Filename: pool/main/l/linux-source-3.4.0/linux-image-3.4.0_20140831_arm.deb
+Size: 5252626
+SHA256: 34a2c4d48c73dd20feb392fba270596f587bfa2e6ec10028fe899b3d1f69affa
+SHA1: 0113f8427e57eae2b554206792a942606ca5bf61
+MD5sum: eda02bf85db8c109bdae5ae8b1baff67
+Description: Linux kernel binary image for version 3.4.0
+ This package contains the Linux kernel image for version
+ 3.4.0.
+ .
+ It also contains the corresponding System.map file, and the modules
+ built by the packager.  It also contains scripts that try to ensure
+ that the system is not left in a unbootable state after an update.
+ .
+ Kernel image packages are generally produced using kernel-package,
+ and it is suggested that you install that package if you wish to
+ create a custom kernel from the sources. Please look at kernel-img.conf(5),
+ and /usr/share/doc/kernel-package/README.gz  from the package kernel-package
+ for details on how to tailor the  installation of this or any other kernel
+ image package
+
