@@ -1,0 +1,51 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Origin: apt.github.com
+Label: apt repository
+Codename: 3.8.11
+Date: Tue, 02 Sep 2014 17:48:52 UTC
+Architectures: amd64 i386 arm
+Components: main
+Description: 3.8.11 kernel-headers for crouton package repo
+MD5Sum:
+ 0aa78b2dd848594fd84fec530e0397b9 2442 main/binary-amd64/Packages
+ 9aebb012a81489ca65c9ebc2036dcd64 1119 main/binary-amd64/Packages.gz
+ 5a900281bdb1c964c563e6fa098847a6 141 main/binary-amd64/Release
+ 9decfc45a45f2df578186c3f87d4f64e 2438 main/binary-i386/Packages
+ 4c76f99d66ad5f35ebbc468399656889 1113 main/binary-i386/Packages.gz
+ ef30f06ae69a0d6c312b99991a87c0ff 140 main/binary-i386/Release
+ dc870cfbdd9eee0e7dec942d727fb075 2434 main/binary-arm/Packages
+ 77988f856dde504749b58b5cf3440f64 1110 main/binary-arm/Packages.gz
+ 58a1485e799fe46e2268aa51e3272960 139 main/binary-arm/Release
+SHA1:
+ ea6225f6c17a293749d833908b1505b3c331804c 2442 main/binary-amd64/Packages
+ 8116aa51a6f6f74c7648b3eab3b75e52278132ba 1119 main/binary-amd64/Packages.gz
+ 1d0b1e2a736dd3bd174d2de68caabcbe0f6bfd87 141 main/binary-amd64/Release
+ 4aa900b431c52a204b9e4de3742f96259cad695c 2438 main/binary-i386/Packages
+ 3ea71c16c10ec4caaa19f877cb866f5b049dbc44 1113 main/binary-i386/Packages.gz
+ a4b9cf08c65965adf49845338658118e47c63623 140 main/binary-i386/Release
+ aba0807dc94c5d42999419b1bea2c797e17dbfc8 2434 main/binary-arm/Packages
+ f0fe01c6270ae88cb4c8189d4d225e3f957dabc2 1110 main/binary-arm/Packages.gz
+ 3e99d6d9780f5d16894fe48e807a42f42b37c63e 139 main/binary-arm/Release
+SHA256:
+ 01d25d7c2696239425f92cfc0ca28fb88c40ba3f6b9badecd29e236b438cc373 2442 main/binary-amd64/Packages
+ 2174d293750512d069ce22948cd0dfcc7bb627ca59987cc9235db42d5e232775 1119 main/binary-amd64/Packages.gz
+ 269fd2d37e21926d2843716ceb264e640539e5976f3907e22d7aeafcf4528c3f 141 main/binary-amd64/Release
+ 8aac9a5b386ff9a34e64c8c02b69c79641f896f787837c546fcbda899e372db2 2438 main/binary-i386/Packages
+ 59fb6f93edb957508971ce4bd246d6ff957241ae6afd4d8e1305a3de5cb45646 1113 main/binary-i386/Packages.gz
+ e853bf424116679b83db142e66f650dafff5d4db3813f729d407c56e2d7eb947 140 main/binary-i386/Release
+ 9349495ed2bcf2f0338be72364c9fa98a5fadbdd82f0e0f9b7e440c1117b16ca 2434 main/binary-arm/Packages
+ 2db6c66c8b067eee431eb64f6a530016253810d4005961950fbfc293b66dfcdd 1110 main/binary-arm/Packages.gz
+ 37218cee1fce8fb7d135d393954d050136635cbbc97e43f244150c634f6e78a4 139 main/binary-arm/Release
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJUBgMIAAoJEEKe6eeHTAxZ4kMH/iGtNqyCz8O9WcBnS6HBGYkd
+I3mf7ajWwFQje6J4SE1EumoOOi3VD+SO2gTsN+Vw3ruQisa/KIpXwbr3KeliVYns
+jZEAAO4T5TSONIJ7GJlhJSrgYoE3qQ7gENsaF1vIJ+yHyQ48cYj/iBFBJtgMiZJZ
+O1v0bF9aXAjF/3Ir6tiDYoCgE8ugpTtY7SMvUmjDd6LpfB68vr1XKlifU7nbv3YP
+GUp6iSEhd0H1W3kheCBZ5PLp6enUjeTjxQkplGLonUtS6s/81BIvaZzGJiP/Br7C
+Gqw6duODxTYb4pOspzJXtd983NVMWxjp41hMQckUkKkLY1rPaRtEwN8A1Mm49Co=
+=Vs7z
+-----END PGP SIGNATURE-----

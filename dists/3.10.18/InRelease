@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Codename: 3.10.18
+Date: Tue, 02 Sep 2014 17:42:57 UTC
+Architectures: amd64 arm
+Components: main
+Description: 3.10.18 kernel-headers for crouton package repo
+MD5Sum:
+ 8135bb9e347749d78f8df3886c601fd3 2460 main/binary-amd64/Packages
+ 0de948799483d4d8613684358a8598b3 1117 main/binary-amd64/Packages.gz
+ 40c90ad8afd4819f974307834c929c92 97 main/binary-amd64/Release
+ 770e58f0cda6ce596fc3580ff42a0945 2452 main/binary-arm/Packages
+ a7e9bd6792af1b967455577903f0582b 1117 main/binary-arm/Packages.gz
+ 7ff47edc1b64262b23520fe1566a1dbe 95 main/binary-arm/Release
+SHA1:
+ 93d466fe2f1ffecfd4865c24ab68fa2032500c6a 2460 main/binary-amd64/Packages
+ 7ed44c0a73d626465bedce67644ac371320aec0d 1117 main/binary-amd64/Packages.gz
+ 17fb169f7ca88efcef02cd38a2d2cfc42c06253f 97 main/binary-amd64/Release
+ a5b620484537f5013a5bc52a690097d5525593cc 2452 main/binary-arm/Packages
+ 624e4b95f4761b3369f3219e6d0c88bb6f3b888e 1117 main/binary-arm/Packages.gz
+ 24b561e925a326a20304f6057a489eb913a19a14 95 main/binary-arm/Release
+SHA256:
+ daa8001b7d6a5c830d8f88e897f64d6a775ae889b2fea20831ed558cf3861cca 2460 main/binary-amd64/Packages
+ 56b9a63dea87ff18642dc001b0d6127c4f662ac45cb273366359e170b4b8c5f5 1117 main/binary-amd64/Packages.gz
+ 73d578eb2b67e71f3a702c413f15192fa2fb7dfde0451a72e4bc774c488cf4e2 97 main/binary-amd64/Release
+ 238f2fac5d584c335a359d6242fac71c1b4f4c8a9b8cc802e008a01075b801f6 2452 main/binary-arm/Packages
+ f3647d9a90f1744808850b5fe29ea47c4bcb9bebbc26715d5bb5d5d4df3e9bde 1117 main/binary-arm/Packages.gz
+ 98f7b8dee0ccbfd63e264fc20af929503836e789328df93ccc77301504c7ff1f 95 main/binary-arm/Release
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJUBgGnAAoJEEKe6eeHTAxZRowH/jqcXk//1JZ328iiFCgEzxSX
+yFAHsClqWaqTKVRqO/BIMoJh6dRU4kdjdKcL7AvYwZeDG+D/dzU+dbwBq9KN4DdK
+RNaXvcOsKTzOacqytCq6dv38eUrcvjPMvxgfwdJDDqS95kV6U3RM9yPCRMZDz9AA
+9+33HJ5tc4FoIrBbBX0mIx2kGd7P6Yib3WVaFolebxza2tQ9hUaIGUXenG7Tw3oG
+1eMAg7tjbxKZrHESH6TaVQMzoVh79aRZTCFHHKO1y95t8i2bNDhB17jGiJG5d7gK
+a1xdVhsi9UdD49qVxGNJWQh1+pGCHof5mEMWhqv56RYmgobqz+W4ShcfZM0hN6w=
+=3Y5/
+-----END PGP SIGNATURE-----

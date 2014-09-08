@@ -1,0 +1,5 @@
+Component: main
+Origin: apt.github.com
+Label: apt repository
+Architecture: amd64
+Description: 3.8.11 kernel-headers for crouton package repo
