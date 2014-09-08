@@ -26,7 +26,7 @@ supported=0
 # FIXME need path.
 for f in `ls xx*`;do
   if [ "x`cat $f|grep Codename|cut -d " " -f 2-`" = "x$KERNEL" ]; then
-    if [ "x`cat $f|grep Architecures|cut -d " " -f 2-|grep -o $ARCH`" = "x$ARCH" ]; then
+    if [ "x`cat $f|grep Architectures|cut -d " " -f 2-|grep -o $ARCH`" = "x$ARCH" ]; then
       supported=1
       break
     fi
