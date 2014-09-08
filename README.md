@@ -1,4 +1,4 @@
-This is a ubuntu ppa for chromebook kernel headers.
+This is a ubuntu/debian ppa for chromebook kernel headers.
 
 Currently supported:
  * Kernel 3.4.0 Architecture arm, i386 and am64 These all need testing.
@@ -19,5 +19,6 @@ This script will:
  * install linux-headers-
  * install linux-image-
  * add a rc.local script to load vboxdrv modules on entering the chroot if they are available.
- * 
+
+Kernel headers are build according to this guide https://github.com/dnschneid/crouton/wiki/Build-kernel-headers-and-install-Virtualbox-(x86) kernel headers for arm are cross compiled.
  
