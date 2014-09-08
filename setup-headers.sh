@@ -8,7 +8,7 @@ if [ $uid -ne 0 ]; then
   echo "$0 must be run as root"
   exit 1
 fi
-BRANCH="test"
+BRANCH="master"
 TMP_DIST="./tmp_dist"
 echo "# This script will add the repo to your sources, download
 and install the kernel headers appropriate to your
