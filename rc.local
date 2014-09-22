@@ -17,7 +17,7 @@ for m in `cat /proc/mounts | /usr/bin/cut -d ' ' -f2 | grep /lib/modules| grep -
 done
 
 # disable module locking and try to load vboxdrv
-if [ `find /lib/modules -name vboxdrv.ko` ]; then
+if [ `find /lib/modules/"`uname -r`" -name vboxdrv.ko` ]; then
     chmod 0666 /sys/module/lsm/parameters/module_locking
     echo 0 > /sys/module/lsm/parameters/module_locking
 

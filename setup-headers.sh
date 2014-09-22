@@ -53,12 +53,17 @@ apt-get install -y linux-image-$KERNEL
 # get rc.local
 if [ -f /etc/rc.local ]; then
   mv --backup=numbered /etc/rc.local /etc/rc.local.old
+  echo ""
   echo "============================================================================"
   echo "If you made any changes to rc.local, then you should reapply them in the new
 /etc/rc.local. Your old file is named /etc/rc.local.old."
   echo "============================================================================"
+  echo ""
 fi
 wget -O /etc/rc.local "https://raw.github.com/divx118/crouton-packages/$BRANCH/rc.local"
+chown root:root /etc/rc.local
+chmod +x /etc/rc.local
+echo ""
 echo "======================================================================================"
 echo "All done now, you can install virtualbox. Note that you need to log out of your chroot
 and start it again to load the modules needed for virtualbox."
