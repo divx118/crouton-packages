@@ -15,15 +15,16 @@
 for m in `cat /proc/mounts | /usr/bin/cut -d ' ' -f2 | grep /lib/modules| grep -v "^/$" `; do
         umount "$m"
 done
-
-# try to load vboxdrv
+# try to load vboxdrv modules
 if [ `find /lib/modules/"\`uname -r\`" -name vboxdrv.ko` ]; then
-
+    # check if module_locking is disabled
+    if ! grep -q "module_locking=0" /proc/cmdline; then
+        exit 2
+    fi
     modprobe vboxdrv
     modprobe vboxpci
     modprobe vboxnetadp
     modprobe vboxnetflt
-
 fi
 
 exit 0
