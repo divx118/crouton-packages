@@ -8,7 +8,7 @@ SignWith: yes
 Pull: 3.8.11
 
 Codename: 3.10.18
-Architectures: amd64 arm
+Architectures: amd64 i386 arm
 Components: main
 Description: 3.10.18 kernel-headers for crouton package repo
 SignWith: yes

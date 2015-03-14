@@ -1,20 +1,20 @@
 Package: linux-headers-3.8.11
 Source: linux-source-3.8.11
-Version: 20140831
+Version: 20150314
 Architecture: amd64
 Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
-Installed-Size: 41244
+Installed-Size: 41377
 Depends: libc6 (>= 2.14)
 Recommends: libc6-dev | libc-dev, gcc | c-compiler, make (>= 3.80-10), binutils (>= 2.12), util-linux (>= 2.10o)
 Suggests: module-init-tools (>= 0.9.10), e2fsprogs (>= 1.29)
 Provides: linux-headers, linux-headers-3.8
 Priority: optional
 Section: devel
-Filename: pool/main/l/linux-source-3.8.11/linux-headers-3.8.11_20140831_amd64.deb
-Size: 6003148
-SHA256: 21bc64dd9150711bad5833e96ff50ef0e3b1316850a719554febe68e55c08f25
-SHA1: ad8f3e5dfc9bc6fcce756c545efb8d1164b04932
-MD5sum: d348b40ef72abcf2c46e98974b952862
+Filename: pool/main/l/linux-source-3.8.11/linux-headers-3.8.11_20150314_amd64.deb
+Size: 6017240
+SHA256: b824abfbc6416e21ddf4b4b207837e7a646533ada5324ebb418b67fcbda6db6e
+SHA1: ee181be7d63c5bc896a66e82ef2fdc249de45c3e
+MD5sum: 374d2a630d8d6d3779a5baaa748e3c31
 Description: Header files related to Linux kernel, specifically,
  version 3.8.11
  .
@@ -27,21 +27,21 @@ Description: Header files related to Linux kernel, specifically,
 
 Package: linux-image-3.8.11
 Source: linux-source-3.8.11
-Version: 20140831
+Version: 20150314
 Architecture: amd64
 Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
-Installed-Size: 18945
+Installed-Size: 19204
 Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
 Depends: coreutils (>= 5.96)
 Suggests: fdutils, linux-doc-3.8.11 | linux-source-3.8.11, ksymoops, linux-image-3.8.11-dbg
 Provides: linux-image, linux-image-3.8
 Priority: optional
 Section: kernel
-Filename: pool/main/l/linux-source-3.8.11/linux-image-3.8.11_20140831_amd64.deb
-Size: 6733612
-SHA256: 179566d36cb5647125c6babd69b5ab2da6bfee57c1b30b0cae0e8f9f0ea9873a
-SHA1: daec5ba655ca7cbc174bc0e1826f5e0feb299ab9
-MD5sum: a41727bf40e919791f8521149a29d60d
+Filename: pool/main/l/linux-source-3.8.11/linux-image-3.8.11_20150314_amd64.deb
+Size: 6860200
+SHA256: 6f0f1ff5daf406d1ac8fc40749ca0a22fa5e60e745c8478de9105e0b4b5538b5
+SHA1: f40429696ffe2cc5415bbbbef5c9cf495a31f061
+MD5sum: bea0582f0db61c271fca93488df99f0c
 Description: Linux kernel binary image for version 3.8.11
  This package contains the Linux kernel image for version
  3.8.11.
