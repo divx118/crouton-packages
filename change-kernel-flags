@@ -1,0 +1,303 @@
+#!/bin/sh
+
+# Script to change the kernel flags.
+# This script needs to be run as root in a
+# Crosh shell.
+
+# trap function for cleaning up file.
+settrap() {
+    trap "set +e; trap - INT HUP TERM 0; $1 exit 2" INT HUP TERM
+    trap "set +e; trap - INT HUP TERM 0; $1" 0
+}
+# error function to gracefully exit.
+error() {
+    ecode="$1"
+    shift
+    echo "$*" 1>&2
+    exit "$ecode"
+}
+
+verifykernel() {
+    dev_debug_vboot -c -k $1 | awk '/^Kernel / { 
+                if ( $3 != "OK" ) {
+                    # Kernel has no valid header
+                    exit 2
+                }
+                }
+                /^  Verify / && $4 ~ /^kern_subkey_[AB].vbpubk:$/ {
+                if ( $5 == "OK" ) {
+                    # kernel is verified with at least one of the vbpubk keys
+                    exit 3
+                } else {
+                    exit 4
+                }
+                }'
+    return $?
+}
+# check if script is run as root
+uid=`id -u $USERNAME`
+if [ $uid -ne 0 ]; then
+    error 1 "$0 must be run as root"
+fi
+
+APPLICATION="${0##*/}"
+
+# Default kernel flags. Check if we have support for vmx, so we add that too.
+KERNEL_FLAGS="lsm.module_locking=0"
+if grep -q '^flags\s*:.* vmx ' /proc/cpuinfo; then
+    KERNEL_FLAGS="$KERNEL_FLAGS disablevmx=off"
+fi
+KERNEL_BACKUP_DIR="/mnt/stateful_partition/backups"
+
+USAGE="$APPLICATION [options] name [...]
+Change kernel flags of the chromeos kernel
+Note: This script needs to be run in a crosh shell!
+Options:
+    -i                    Print out info about the kernel partitions.
+    -f KERNEL_FLAGS       Add different kernel flags then default = 
+                          \""$KERNEL_FLAGS"\".
+    -r                    Revert the kernel flag changes by copying back a 
+                          previously created backup kernel.
+    -d KERNEL_BACKUP_DIR  Dir where the backup kernels are. default =
+                          \"$KERNEL_BACKUP_DIR\".                       
+    -h print this help text.
+    "
+
+INFO=""
+REVERT=""
+ 
+# Process arguments
+while getopts 'f:ird:h' f; do
+    case "$f" in
+    f) KERNEL_FLAGS="$OPTARG";;
+    i) INFO='y';;
+    r) REVERT='y';;
+    d) KERNEL_BACKUP_DIR="$OPTARG";;
+    #k) KERNEL_PART="$OPTARG";;
+    h) echo "$USAGE"
+       exit 0;;
+    \?) echo "$USAGE"
+        exit 0;;
+    esac
+done
+
+# root device for example /dev/sda /dev/mmcblk0
+dev=`rootdev -s -d`
+# fixed kernel uuid provided by google to identify kernel partitions.
+kern_uuid="FE3A2A5D-4F32-41A7-B725-ACCC3285A309"
+# Loop through kernel partitions to get boot priority
+firstpriority=-1
+for part in `cgpt show $dev -qn |grep "$kern_uuid" | \
+        awk '/^  / { print $3 }'`; do
+    priority="`cgpt show -i"$part" -P "$dev"`"
+    if [ $priority -gt $firstpriority ]; then
+        firstpriority=$priority
+        bootpartition=$part
+    fi
+done
+
+# Get info about the kernel partitions. TODO: needs a bit of work.
+# for example error exiting. Give less, but more relevant info.
+if [ "$INFO" = "y" ]; then
+    # list info about kernels
+    echo "Check if the kernel partitions are signed with vbpubk:\n"
+    dev_debug_vboot -c -i $dev
+    echo "\nShow kernel details about the installed kernels.\n"
+    for part in `cgpt show $dev -qn |grep "$kern_uuid" | \
+            awk '/^  / { print $3 }'`; do
+        vbutil_kernel --verify $dev$part --verbose
+    done
+    echo "\ncrosssystem dev_boot* flags settings:\n"
+    crossystem |grep --color=never dev_boot
+    exit 0
+fi
+
+# Revert the kernel flag changes by copying back a backup kernel.
+if [ "$REVERT" = "y" ]; then
+    if [ ! -d "$KERNEL_BACKUP_DIR" ]; then
+        error 1 "$KERNEL_BACKUP_DIR not found."
+    fi
+    # Use label to only list kernels that are from that partition backed up
+    # TODO: Maybe we should list all the backup kernel files?
+    label=`cgpt show -i"$bootpartition" -l "$dev"`
+    label=${label#KERN-}
+    i=0
+    crtimeold=0
+    echo "List of backup kernel files in \"$KERNEL_BACKUP_DIR\"\n"
+    for bkname in "$KERNEL_BACKUP_DIR"/*$label*.bin; do
+        if [ -f "$bkname" ]; then
+            i=$((i+1))
+            verifykernel "$bkname"
+            # Process awk exit codes.
+            case $? in
+                2) # Do not add kernels to the list with no valid header
+                   continue
+                   ;;
+                3) v=1
+                   # Keep track of which is the latest backup.
+                   # This will only work for filenames in format
+                   # kernel_[A,B]_YYYYMMDD_HHMMSS.bin. This will be the case
+                   # when backed up with make_dev_ssd.sh.
+                   crtime=`echo ${bkname%.*} | cut -d "_" -f4-5 | sed 's/_//'`
+                   if [ "$crtime" -gt "$crtimeold" 2>/dev/null ]; then
+                       prefer="$i"
+                       crtimeold="$crtime"
+                   fi
+                   echo "[$i] "${bkname##*/}" --> Verified"
+                   ;;
+                4) v=0
+                   echo "[$i] "${bkname##*/}" --> Not verified"
+                   ;;
+                *) error 1 "dev_debug_vboot failed"
+                   ;;
+            esac         
+        # list of verified [01],kernel filename
+        bknames=${bknames## }" $v,${bkname##*/}"
+        fi
+    done
+    if [ "$i" -eq 0 ]; then
+        error 2 "No backup kernels found in $KERNEL_BACKUP_DIR"
+    else
+        if [ -n "$prefer" ]; then
+            echo "\nYou probably want number [$prefer], it is the latest"
+            echo "verified kernel. Choose that if you are not sure."
+        fi
+        echo "\n[C] Cancel\n"
+    fi
+    read -p "Choice: " choice
+    # Do some magic stuff here to dd back the kernel.
+    if [ "$choice" -ge "1" -a "$choice" -le "$i" 2>/dev/null ]; then
+        i=0
+        for f in $bknames; do
+            i=$((i+1))
+            if [ "$i" -eq "$choice" ]; then
+                if [ "${f%%,*}" -eq 1 ]; then
+                    ver="Verified"
+                else
+                    ver="NOT verified"
+                fi
+                echo \
+"Are you sure you want to put back \"${f##*,}\" on partition
+$bootpartition which is a $ver chromeos kernel?\n"
+                read -p "Your answer (Y/n)?" YES
+                if [ "${YES#[Yy]}" = "$YES" ]; then
+                    echo "Exiting with no changes"
+                else
+                    echo \
+"Do not interrupt this operation, if you still do for some reason
+then rerun this script and try again, else you may end up with a
+corrupted partition."
+                    # We fill the partition first with zeros so when a backup
+                    # is created we will have no leftovers from a previously
+                    # dd. 
+                    dd if="/dev/null" \
+                        of="$dev$bootpartition" bs=512 || error 1 \
+                    "Something went wrong, please try again dd zero failed"
+                    sync
+                    dd if="$KERNEL_BACKUP_DIR/${f##*,}" \
+                        of="$dev$bootpartition" bs=512 ||  error 1 \
+                    "Something went wrong, please try again. dd failed"
+                    sync
+                    verifykernel "$dev$bootpartition"
+                    case $? in
+                        2) # kernels with no valid header
+                           error 1 \
+                           "We have no valid header, please try again." 
+                           ;;
+                        3) echo "Kernel $dev$bootpartition is verified.\n"
+                           crossystem dev_boot_signed_only=1 || error 1 \
+                           "dev_boot_signed_only=1 could not be set"
+                           # TODO: Remove this when crouton is fixed
+                           crossystem dev_boot_usb=0 dev_boot_legacy=0 || \
+                               error 1 \
+                           "dev_boot_usb=0 dev_boot_legacy=0 could not be set"
+                           crossystem | grep --color=never dev_boot || \
+                               error 1 \
+                           "crossystem failed"
+                           ;;
+                        4) echo "Kernel $dev$bootpartition is not verified.\n"
+                           crossystem dev_boot_signed_only=0 || error 1 \
+                           "dev_boot_signed_only=1 could not be set"
+                           # TODO: Remove this when crouton is fixed
+                           crossystem dev_boot_usb=1 dev_boot_legacy=1 || \
+                               error 1 \
+                           "dev_boot_usb=0 dev_boot_legacy=0 could not be set"
+                           crossystem | grep --color=never dev_boot || \
+                               error 1 \
+                           "crossystem failed"
+                           ;;
+                        *) error 1 "dev_debug_vboot failed"
+                           ;;
+                    esac
+                    echo "\nOk, all done now"
+                    echo "Reboot to make the changes take effect."
+                fi
+             fi
+        done
+    else
+        echo "Operation canceled."
+    fi
+    exit 0
+fi
+# Create temporary file for the kernel config file.
+KERNEL_FLAGSFILE="`mktemp --tmpdir=/tmp "$APPLICATION.XXX.$bootpartition"`"
+echo $KERNEL_FLAGSFILE
+settrap "rm -f '$KERNEL_FLAGSFILE';"
+/usr/share/vboot/bin/make_dev_ssd.sh --save_config \
+    "${KERNEL_FLAGSFILE%.$bootpartition}" --partitions "$bootpartition" \
+    || error 1 "make_dev_ssd.sh --save_config Failed"
+# TODO: remove trailing spaces from file cosmetic
+
+
+# Check if we already have all the flags in the kernel cmdline
+# that will be booted on a reboot.
+for f in $KERNEL_FLAGS; do
+    if cat "$KERNEL_FLAGSFILE" | grep -q "$f"; then
+        echo "\"$f\"\tis already added to the kernel cmdline."
+    else
+        tmp_kernel_flags=${tmp_kernel_flags## }" $f"
+        # Check if the flag already exists then replace it else add it.
+        # This will of course not work for every flag, but only for
+        # "FLAG=value". We will present the user with the complete cmdline,
+        # so he/she can check if everything is ok.
+        if cat "$KERNEL_FLAGSFILE" | grep -q "${f%=*}="; then
+            sed -i -e "s/${f%=*}=[^ ]*/$f/" "$KERNEL_FLAGSFILE"
+        else
+            sed -i -e "s/$/ $f/" "$KERNEL_FLAGSFILE"
+        fi
+    fi
+done
+# TODO: Perhaps we should also check existing /proc/cmdline to see if the
+# device al ready is rebooted to apply the changes.
+if [ -n "$tmp_kernel_flags" ]; then
+    echo "\nKernel flags added or changed are:\n\"$tmp_kernel_flags\"\n"
+    echo "Full cmdline is:"
+    cat "$KERNEL_FLAGSFILE"
+    echo ""
+    read -p "Do you want to apply those changes (Y/n)?" YES
+    if [ "${YES#[Yy]}" = "$YES" ]; then
+        echo "Exiting with no changes"
+    else 
+        crossystem dev_boot_signed_only=0 || error 1 \
+            "dev_boot_signed_only=0 could not be set"
+        # For now we also need to set dev_boot_usb=1 dev_boot_legacy=1 to
+        # prevent crouton for turning it back on.
+        # TODO: Remove this when crouton checks if it safely can
+        # be turned back on.
+        crossystem dev_boot_usb=1 dev_boot_legacy=1 || error 1 \
+            "dev_boot_usb=1 dev_boot_legacy=1 could not be set"
+        /usr/share/vboot/bin/make_dev_ssd.sh --set_config \
+            "${KERNEL_FLAGSFILE%.$bootpartition}" --partitions \
+             "$bootpartition" || error 1 "make_dev_ssd.sh --set_config Failed"
+        crossystem | grep --color=never dev_boot || error 1 "crossystem failed"
+        echo "\nReboot to make the changes take effect."
+    fi
+else
+    echo "\n\"$KERNEL_FLAGS\" are already added to the kernel cmdline."
+    echo "If you wish to revert the original kernel, run \"$APPLICATION -r\""
+    echo "which will give you the option to copy back the original kernel"
+    echo "from an earlier created backup.\n"
+fi
+# Cleanup
+rm -f "$KERNEL_FLAGSFILE"
+exit 0
