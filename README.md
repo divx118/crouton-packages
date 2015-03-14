@@ -6,7 +6,7 @@ Currently supported:
  * kerenl 3.10.18 Architecture arm and amd64     ==> These all need testing.
 
 For being able to load modules outside /lib/modules from chromeos we will need to disable module_locking.
-This can be done by changing the kernel flags. I wrote a little script that does this for you and also has the option to revert the changes.
+This can be done by changing the kernel flags. I wrote a little script that does this for you and also has the option to revert the changes.  
 Open a **cros** shell and follow on screen instructions:
 ```
 $ cd ~/Downloads
@@ -14,7 +14,8 @@ $ wget https://raw.githubusercontent.com/divx118/crouton-packages/master/change-
 $ sudo sh ~/Downloads/change-kernel-flags
 ```
 When running `sudo sh ~/Downloads/change-kernel-flags -h` it will give you the usage. 
-When you want to revert the changes so put back a backup kernel use -r `sudo sh ~/Downloads/change-kernel-flags -r`
+When you want to revert the changes so put back a backup kernel use -r  
+`sudo sh ~/Downloads/change-kernel-flags -r`
 
 Open a shell in your **chroot**:
 
