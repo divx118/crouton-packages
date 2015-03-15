@@ -3,7 +3,7 @@ This is a ubuntu/debian ppa for chromebook kernel headers.
 Currently supported:
  * Kernel 3.4.0 Architecture arm, i386 and am64  ==> These all need testing.
  * Kernel 3.8.11 Architecture arm, i386 and am64 ==> amd64 is tested. i386 and arm needs testing.
- * kerenl 3.10.18 Architecture arm and amd64     ==> These all need testing.
+ * kerenl 3.10.18 Architecture arm and amd64     ==> amd64 is tested. i386 and arm needs testing.
 
 For being able to load modules outside /lib/modules from chromeos we will need to disable module_locking.
 This can be done by changing the kernel flags. I wrote a little script that does this for you and also has the option to revert the changes.  
