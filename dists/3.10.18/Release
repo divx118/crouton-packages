@@ -1,6 +1,6 @@
 Codename: 3.10.18
-Date: Sat, 14 Mar 2015 14:17:28 UTC
-Architectures: amd64 i386 arm
+Date: Sun, 15 Mar 2015 10:37:55 UTC
+Architectures: amd64 i386 arm armhf
 Components: main
 Description: 3.10.18 kernel-headers for crouton package repo
 MD5Sum:
@@ -13,6 +13,9 @@ MD5Sum:
  770e58f0cda6ce596fc3580ff42a0945 2452 main/binary-arm/Packages
  a7e9bd6792af1b967455577903f0582b 1117 main/binary-arm/Packages.gz
  7ff47edc1b64262b23520fe1566a1dbe 95 main/binary-arm/Release
+ d624607bc5acc37f75c7dcd4f3714aac 2435 main/binary-armhf/Packages
+ 87d8950018bd21dcc07e81dfc556ae60 1116 main/binary-armhf/Packages.gz
+ 88f3ca5f1c3eafb4cc04d52a4ef532e8 97 main/binary-armhf/Release
 SHA1:
  0077b8850df70f6b0c45030a70f17d13944eb95e 2460 main/binary-amd64/Packages
  cccdc8591d032867cc31b61d79f0f3257490a73e 1117 main/binary-amd64/Packages.gz
@@ -23,6 +26,9 @@ SHA1:
  a5b620484537f5013a5bc52a690097d5525593cc 2452 main/binary-arm/Packages
  624e4b95f4761b3369f3219e6d0c88bb6f3b888e 1117 main/binary-arm/Packages.gz
  24b561e925a326a20304f6057a489eb913a19a14 95 main/binary-arm/Release
+ 1ba93d9045bcf6bd475889a485f692ed70d8fdc9 2435 main/binary-armhf/Packages
+ f4f63b9a72600af0b860e82a0c7f769818ea10a2 1116 main/binary-armhf/Packages.gz
+ 7eaf0d2b96ad2c2943691fa65583b61224c9392e 97 main/binary-armhf/Release
 SHA256:
  6c68110a77165259c0fc484b0dfc6b7cbdd427ae2969d6798421a964c676e3c9 2460 main/binary-amd64/Packages
  aebd8ac0942e1debed34f6327e1ce8839a36eaea4bf66ab9743ec95e6fe2be05 1117 main/binary-amd64/Packages.gz
@@ -33,3 +39,6 @@ SHA256:
  238f2fac5d584c335a359d6242fac71c1b4f4c8a9b8cc802e008a01075b801f6 2452 main/binary-arm/Packages
  f3647d9a90f1744808850b5fe29ea47c4bcb9bebbc26715d5bb5d5d4df3e9bde 1117 main/binary-arm/Packages.gz
  98f7b8dee0ccbfd63e264fc20af929503836e789328df93ccc77301504c7ff1f 95 main/binary-arm/Release
+ a0c6132ab6af445fa0bfc13dd1317eee6d9b53f2541df6d862ecce33c75791cb 2435 main/binary-armhf/Packages
+ 8d64d55671c2e76ef915593a256bea7d0aaa15f94f6a837aa67212f8374137b2 1116 main/binary-armhf/Packages.gz
+ 1f61963b3b1cf6c250cf09fbfcb419d2ec959bbba75e335ce0f4a2f965a485c9 97 main/binary-armhf/Release

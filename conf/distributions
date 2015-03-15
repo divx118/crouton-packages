@@ -1,21 +1,21 @@
 Origin: apt.github.com
 Label: apt repository
 Codename: 3.8.11
-Architectures: amd64 i386 arm
+Architectures: amd64 i386 armhf
 Components: main
 Description: 3.8.11 kernel-headers for crouton package repo
 SignWith: yes
 Pull: 3.8.11
 
 Codename: 3.10.18
-Architectures: amd64 i386 arm
+Architectures: amd64 i386 armhf
 Components: main
 Description: 3.10.18 kernel-headers for crouton package repo
 SignWith: yes
 Pull: 3.10.18
 
 Codename: 3.4.0
-Architectures: amd64 i386 arm
+Architectures: amd64 i386 armhf
 Components: main
 Description: 3.4.0 kernel-headers for crouton package repo
 SignWith: yes

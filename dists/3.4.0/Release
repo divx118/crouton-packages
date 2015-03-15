@@ -1,6 +1,6 @@
 Codename: 3.4.0
-Date: Tue, 02 Sep 2014 17:46:30 UTC
-Architectures: amd64 i386 arm
+Date: Sun, 15 Mar 2015 11:11:05 UTC
+Architectures: amd64 i386 armhf
 Components: main
 Description: 3.4.0 kernel-headers for crouton package repo
 MD5Sum:
@@ -10,9 +10,9 @@ MD5Sum:
  ee603673a4f1d648809845700978c204 2422 main/binary-i386/Packages
  67028f0625c50c1e750245bf2d9fea01 1117 main/binary-i386/Packages.gz
  3ed37b35d4966ace9b982bea51325547 94 main/binary-i386/Release
- eff48076da1db2fb1da3cf4f0dccb3d6 2418 main/binary-arm/Packages
- 6746ac39a4621a2093acfacb87438a35 1114 main/binary-arm/Packages.gz
- de242a05185dfaa8185de60647f33980 93 main/binary-arm/Release
+ 4beaff16339e42bb27e86761d8c069be 2401 main/binary-armhf/Packages
+ 08f5fe15a122fae30c455576bb93ad78 1111 main/binary-armhf/Packages.gz
+ d3a7babe0223653c9590d03c6d03fcbd 95 main/binary-armhf/Release
 SHA1:
  9cb9f2136ab33feff84359bb024df8224b8962aa 2426 main/binary-amd64/Packages
  81bb16d59036dc692eabc96ed0c85f7990a4556f 1115 main/binary-amd64/Packages.gz
@@ -20,9 +20,9 @@ SHA1:
  81d9312b3526ec32964c452ed1694e0afb9e305b 2422 main/binary-i386/Packages
  6473f1b4aeb4b336ca808c56716dd47d3d0eba46 1117 main/binary-i386/Packages.gz
  24993eda1b1086a44482baa2c9d8fcdf1a92da75 94 main/binary-i386/Release
- 43e0f558c487e3dd6987de466c4d95deb36c20b8 2418 main/binary-arm/Packages
- 63db834f69ec1b6e7c05ea51d0d25d7b39e0c50a 1114 main/binary-arm/Packages.gz
- 13205cc84c3f9542a79f81d5dab8550e2d37fdf4 93 main/binary-arm/Release
+ 3cd7c23dca9406355b7d3eb078edef7408e806da 2401 main/binary-armhf/Packages
+ d12c90f8274c94d47bbb7d65eb33669f7d9f4342 1111 main/binary-armhf/Packages.gz
+ 585befc51d7bb2bd859797dbb11df9f2b7fd5cfa 95 main/binary-armhf/Release
 SHA256:
  cd6a589b2595cfa5e3581cd791a069c6aeaeec219d2991c7182fa23eb22b0514 2426 main/binary-amd64/Packages
  4f194e334dfd6d5e431d4eb0999fffe8eaf8f3437fde4ecf46f6e863a3c62f34 1115 main/binary-amd64/Packages.gz
@@ -30,6 +30,6 @@ SHA256:
  59ae80de34cd4418843495c77c5c7476ab6e9adda43a3162cd6a91e3d09c3451 2422 main/binary-i386/Packages
  846f7732146b1d5cbed78e0e648d9eadc4c72f508bfeae92b4a42872a5811200 1117 main/binary-i386/Packages.gz
  3adf8afac8d634f012f19d7c507962b7b037b02c55a0e446e443cae5149081e6 94 main/binary-i386/Release
- 553deb3f89fd3fd00bb3518830f0bc1cce6e957f7bb9a353530dfa151678e03c 2418 main/binary-arm/Packages
- eb4235924d18d84f8e8f46eda813be8ac358b76b66db54959ce9458fc744d5b2 1114 main/binary-arm/Packages.gz
- 1d413b143d4fec2990a30aace8efb93c47f2e7d76fc7226d741cbf159da91e93 93 main/binary-arm/Release
+ 829830aba323773b5d864bcbd74b1d85ac7c4735297aace4d2816b4e267d5fb9 2401 main/binary-armhf/Packages
+ 34bf8921e936e06669424985d5ac14651b13ed30a48014de6fc9ed63af67be17 1111 main/binary-armhf/Packages.gz
+ 0f77065373d2e22287ccdeaaad5e7c24c14b70d0daf4622efb6fd01b2a153568 95 main/binary-armhf/Release

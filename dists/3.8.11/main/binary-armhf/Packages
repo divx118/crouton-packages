@@ -1,0 +1,58 @@
+Package: linux-headers-3.8.11
+Source: linux-source-3.8.11
+Version: 20150314
+Architecture: armhf
+Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
+Installed-Size: 41024
+Recommends: libc6-dev | libc-dev, gcc | c-compiler, make (>= 3.80-10), binutils (>= 2.12), util-linux (>= 2.10o)
+Suggests: module-init-tools (>= 0.9.10), e2fsprogs (>= 1.29)
+Provides: linux-headers, linux-headers-3.8
+Priority: optional
+Section: devel
+Filename: pool/main/l/linux-source-3.8.11/linux-headers-3.8.11_20150314_armhf.deb
+Size: 5923996
+SHA256: 1acecf0bf88060f6e00ea02189e7d61adafcc931a8f440520e8da4169c660cfe
+SHA1: 512a2e7fd90314f1750d217d79c6aab5b7fb8413
+MD5sum: 8dbc35bac379da572b57c1a0511cfc67
+Description: Header files related to Linux kernel, specifically,
+ version 3.8.11
+ .
+ This package provides kernel header files for sites
+ that want the latest kernel headers for version
+ 3.8.11.
+ Please read
+ /usr/share/doc/linux-headers-3.8.11/debian.README.gz
+ for details
+
+Package: linux-image-3.8.11
+Source: linux-source-3.8.11
+Version: 20150314
+Architecture: armhf
+Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
+Installed-Size: 11492
+Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
+Depends: coreutils (>= 5.96)
+Suggests: fdutils, linux-doc-3.8.11 | linux-source-3.8.11, ksymoops, linux-image-3.8.11-dbg
+Provides: linux-image, linux-image-3.8
+Priority: optional
+Section: kernel
+Filename: pool/main/l/linux-source-3.8.11/linux-image-3.8.11_20150314_armhf.deb
+Size: 5512996
+SHA256: a454d99623238dd96ad576c779ef70f3bbc7cefd240e086fe91c436b568dcb08
+SHA1: 99138f7f861b54d26eb71c2224d883e1e06c4fed
+MD5sum: f566ee89526daa3cebb8d4eb9aedd2a3
+Description: Linux kernel binary image for version 3.8.11
+ This package contains the Linux kernel image for version
+ 3.8.11.
+ .
+ It also contains the corresponding System.map file, and the modules
+ built by the packager.  It also contains scripts that try to ensure
+ that the system is not left in a unbootable state after an update.
+ .
+ Kernel image packages are generally produced using kernel-package,
+ and it is suggested that you install that package if you wish to
+ create a custom kernel from the sources. Please look at kernel-img.conf(5),
+ and /usr/share/doc/kernel-package/README.gz  from the package kernel-package
+ for details on how to tailor the  installation of this or any other kernel
+ image package
+
