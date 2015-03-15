@@ -1,20 +1,20 @@
 Package: linux-headers-3.4.0
 Source: linux-source-3.4.0
-Version: 20140831
+Version: 20150314
 Architecture: i386
 Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
-Installed-Size: 36744
+Installed-Size: 36779
 Depends: libc6 (>= 2.11)
 Recommends: libc6-dev | libc-dev, gcc | c-compiler, make (>= 3.80-10), binutils (>= 2.12), util-linux (>= 2.10o)
 Suggests: module-init-tools (>= 0.9.10), e2fsprogs (>= 1.29)
 Provides: linux-headers, linux-headers-3.4
 Priority: optional
 Section: devel
-Filename: pool/main/l/linux-source-3.4.0/linux-headers-3.4.0_20140831_i386.deb
-Size: 5458564
-SHA256: ea93c430ba8e61004ab9064d83eea224f34d13263d3655997d0a5ee3ff424984
-SHA1: 97b0b316625f8fe78af232c54b7c13f7fdbcad51
-MD5sum: c587fefbf24a2a7c651eab6ed4dfa065
+Filename: pool/main/l/linux-source-3.4.0/linux-headers-3.4.0_20150314_i386.deb
+Size: 5459410
+SHA256: 664b59eb556b76eb31625fd08077f20a5cea0daec9f5ac08b1e48fef9992e0a7
+SHA1: f566fb842f9b3a59e41d6de76ebf739c816ce356
+MD5sum: 09c34ad187f7d6886b7ce24be5fdf770
 Description: Header files related to Linux kernel, specifically,
  version 3.4.0
  .
@@ -27,21 +27,21 @@ Description: Header files related to Linux kernel, specifically,
 
 Package: linux-image-3.4.0
 Source: linux-source-3.4.0
-Version: 20140831
+Version: 20150314
 Architecture: i386
 Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
-Installed-Size: 13879
+Installed-Size: 13940
 Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
 Depends: coreutils (>= 5.96)
 Suggests: fdutils, linux-doc-3.4.0 | linux-source-3.4.0, ksymoops, linux-image-3.4.0-dbg
 Provides: linux-image, linux-image-3.4
 Priority: optional
 Section: kernel
-Filename: pool/main/l/linux-source-3.4.0/linux-image-3.4.0_20140831_i386.deb
-Size: 5977308
-SHA256: 83c3111226c88738027512a849729fa4215c8debad2e698571d44a657be6a545
-SHA1: a312a261e1a09837c3566cb61f1774da8ef32bf6
-MD5sum: 73cd5a79db8c41b543db867e25f0440f
+Filename: pool/main/l/linux-source-3.4.0/linux-image-3.4.0_20150314_i386.deb
+Size: 6016326
+SHA256: e4077981aac2dd664eb1dcf2900fb673f92e0d0ecda9ac8049e59ea9df1261a2
+SHA1: 5c8a1e93ead093a0ab4719dd1d95a267f2601f7e
+MD5sum: 51e47c14ffa69a3f52dee6b9647383d8
 Description: Linux kernel binary image for version 3.4.0
  This package contains the Linux kernel image for version
  3.4.0.
