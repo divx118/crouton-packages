@@ -1,0 +1,3 @@
+Component: main
+Architecture: amd64
+Description: 3.14.0 kernel-headers for crouton package repo

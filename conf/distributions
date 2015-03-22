@@ -20,3 +20,10 @@ Components: main
 Description: 3.4.0 kernel-headers for crouton package repo
 SignWith: yes
 Pull: 3.4.0
+
+Codename: 3.14.0
+Architectures: amd64 i386 armhf
+Components: main
+Description: 3.14.0 kernel-headers for crouton package repo
+SignWith: yes
+Pull: 3.14.0
