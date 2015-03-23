@@ -15,7 +15,9 @@ $ sudo sh ~/Downloads/change-kernel-flags
 ```
 When running `sudo sh ~/Downloads/change-kernel-flags -h` it will give you the usage. 
 When you want to revert the changes so put back a backup kernel use -r  
-`sudo sh ~/Downloads/change-kernel-flags -r`
+`sudo sh ~/Downloads/change-kernel-flags -r`  
+
+**Note:** You will need to repeat the above steps after each chromeos update.  
 
 Open a shell in your **chroot**:
 
