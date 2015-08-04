@@ -7,7 +7,7 @@ Currently supported:
 
 For being able to load modules outside /lib/modules from chromeos we will need to disable module_locking.
 This can be done by changing the kernel flags. I wrote a little script that does this for you and also has the option to revert the changes.  
-Open a **cros** shell and follow on screen instructions:
+Open a **crosh** shell and follow on screen instructions:
 ```
 $ cd ~/Downloads
 $ wget https://raw.githubusercontent.com/divx118/crouton-packages/master/change-kernel-flags
