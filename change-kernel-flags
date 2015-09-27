@@ -18,7 +18,7 @@ error() {
 }
 
 verifykernel() {
-    dev_debug_vboot -c -k $1 | awk '/^Kernel / { 
+    dev_debug_vboot -c -k $1 | awk '/^Kernel / {
                 if ( $3 != "OK" ) {
                     # Kernel has no valid header
                     exit 2
@@ -54,12 +54,12 @@ Change kernel flags of the chromeos kernel
 Note: This script needs to be run in a crosh shell!
 Options:
     -i                    Print out info about the kernel partitions.
-    -f KERNEL_FLAGS       Add different kernel flags then default = 
+    -f KERNEL_FLAGS       Add different kernel flags then default =
                           \""$KERNEL_FLAGS"\".
-    -r                    Revert the kernel flag changes by copying back a 
+    -r                    Revert the kernel flag changes by copying back a
                           previously created backup kernel.
     -d KERNEL_BACKUP_DIR  Dir where the backup kernels are. default =
-                          \"$KERNEL_BACKUP_DIR\".                       
+                          \"$KERNEL_BACKUP_DIR\".
     -h print this help text.
     "
 
@@ -150,7 +150,7 @@ if [ "$REVERT" = "y" ]; then
                    ;;
                 *) error 1 "dev_debug_vboot failed"
                    ;;
-            esac         
+            esac
         # list of verified [01],kernel filename
         bknames=${bknames## }" $v,${bkname##*/}"
         fi
@@ -179,7 +179,7 @@ if [ "$REVERT" = "y" ]; then
                 echo \
 "Are you sure you want to put back \"${f##*,}\" on partition
 $bootpartition which is a $ver chromeos kernel?\n"
-                read -p "Your answer (Y/n)?" YES
+                read -p "Your answer (y/N)?" YES
                 if [ "${YES#[Yy]}" = "$YES" ]; then
                     echo "Exiting with no changes"
                 else
@@ -189,7 +189,7 @@ then rerun this script and try again, else you may end up with a
 corrupted partition."
                     # We fill the partition first with zeros so when a backup
                     # is created we will have no leftovers from a previously
-                    # dd. 
+                    # dd.
                     dd if="/dev/null" \
                         of="$dev$bootpartition" bs=512 || error 1 \
                     "Something went wrong, please try again dd zero failed"
@@ -202,7 +202,7 @@ corrupted partition."
                     case $? in
                         2) # kernels with no valid header
                            error 1 \
-                           "We have no valid header, please try again." 
+                           "We have no valid header, please try again."
                            ;;
                         3) echo "Kernel $dev$bootpartition is verified.\n"
                            crossystem dev_boot_signed_only=1 || error 1 \
@@ -274,10 +274,10 @@ if [ -n "$tmp_kernel_flags" ]; then
     echo "Full cmdline is:"
     cat "$KERNEL_FLAGSFILE"
     echo ""
-    read -p "Do you want to apply those changes (Y/n)?" YES
+    read -p "Do you want to apply those changes (y/N)?" YES
     if [ "${YES#[Yy]}" = "$YES" ]; then
         echo "Exiting with no changes"
-    else 
+    else
         crossystem dev_boot_signed_only=0 || error 1 \
             "dev_boot_signed_only=0 could not be set"
         # For now we also need to set dev_boot_usb=1 dev_boot_legacy=1 to
