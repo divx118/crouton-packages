@@ -1,20 +1,20 @@
 Package: linux-headers-3.14.0
 Source: linux-source-3.14.0
-Version: 20150322
+Version: 20151227
 Architecture: amd64
 Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
-Installed-Size: 49196
+Installed-Size: 50487
 Depends: libc6 (>= 2.14)
 Recommends: libc6-dev | libc-dev, gcc | c-compiler, make (>= 3.80-10), binutils (>= 2.12), util-linux (>= 2.10o)
 Suggests: module-init-tools (>= 0.9.10), e2fsprogs (>= 1.29)
 Provides: linux-headers, linux-headers-3.14
 Priority: optional
 Section: devel
-Filename: pool/main/l/linux-source-3.14.0/linux-headers-3.14.0_20150322_amd64.deb
-Size: 6927932
-SHA256: b0fba3ce6b370e65afa12a3c8a5d13b41322e6e24345c003fe83efcccc1868d4
-SHA1: b3cc92d37f82465b0ef3cf188ee91307984ff0ae
-MD5sum: df62f53c02e83cae36dd7f97d84c1147
+Filename: pool/main/l/linux-source-3.14.0/linux-headers-3.14.0_20151227_amd64.deb
+Size: 6985508
+SHA256: 84855ff044c54d93df77e5dc77342526563f42ce5838e25ce293f2e802b68c3b
+SHA1: f03a13f1ac7703ecf0e76c7691cfc73728527e29
+MD5sum: df183fa5ed5a0596811573d6856a2e24
 Description: Header files related to Linux kernel, specifically,
  version 3.14.0
  .
@@ -27,21 +27,21 @@ Description: Header files related to Linux kernel, specifically,
 
 Package: linux-image-3.14.0
 Source: linux-source-3.14.0
-Version: 20150322
+Version: 20151227
 Architecture: amd64
 Maintainer: Unknown Kernel Package Maintainer <unknown@unconfigured.in.etc.kernel-pkg.conf>
-Installed-Size: 21090
+Installed-Size: 21542
 Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
 Depends: coreutils (>= 5.96), initramfs-tools | linux-initramfs-tool
 Suggests: fdutils, linux-doc-3.14.0 | linux-source-3.14.0, ksymoops, linux-image-3.14.0-dbg
 Provides: linux-image, linux-image-3.14
 Priority: optional
 Section: kernel
-Filename: pool/main/l/linux-source-3.14.0/linux-image-3.14.0_20150322_amd64.deb
-Size: 7787894
-SHA256: 9104cea06fb9c5e157dee6c1b7469d735e4eb62f1fa4dac683cb2748f68f641a
-SHA1: 58f9029c11a8eb8da2239dfe575bf34ef636b469
-MD5sum: 424be6c62e57a3732d4c883ff6d56925
+Filename: pool/main/l/linux-source-3.14.0/linux-image-3.14.0_20151227_amd64.deb
+Size: 7926102
+SHA256: 6297bc6651fca724655d85e50021097ac7945d927a34bcc7cb19ef9bb57d8ce9
+SHA1: c96efc12db640b50684dd8863040c6655dd61d75
+MD5sum: 9fdd72def5da4542362e1490f87c3aa3
 Description: Linux kernel binary image for version 3.14.0
  This package contains the Linux kernel image for version
  3.14.0.
