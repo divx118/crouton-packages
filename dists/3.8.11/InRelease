@@ -4,13 +4,13 @@ Hash: SHA1
 Origin: apt.github.com
 Label: apt repository
 Codename: 3.8.11
-Date: Sat, 02 Apr 2016 15:08:15 UTC
+Date: Sun, 01 May 2016 06:09:11 UTC
 Architectures: amd64 i386 armhf
 Components: main
 Description: 3.8.11 kernel-headers for crouton package repo
 MD5Sum:
- 34b155f0c17759cb1bda549f06dcdbbc 2482 main/binary-amd64/Packages
- 3a4a21c0db2a9d9d7a788c9a5d44172f 1133 main/binary-amd64/Packages.gz
+ 8fa60e0feb5ff36085a45b0bdcd6da9d 2482 main/binary-amd64/Packages
+ c3cc57b0209287dbc24c82d33330aef2 1133 main/binary-amd64/Packages.gz
  5a900281bdb1c964c563e6fa098847a6 141 main/binary-amd64/Release
  9decfc45a45f2df578186c3f87d4f64e 2438 main/binary-i386/Packages
  4c76f99d66ad5f35ebbc468399656889 1113 main/binary-i386/Packages.gz
@@ -19,8 +19,8 @@ MD5Sum:
  a38b5d061a2d4aef5271b2ea513093dd 1107 main/binary-armhf/Packages.gz
  2ee36d0dd11076be2a7e88353ff63186 141 main/binary-armhf/Release
 SHA1:
- cfe0e0f9536d5736f829c27121ccb5ddc6c47e34 2482 main/binary-amd64/Packages
- 92b6390addfbe1ba0e4b1d80db99b72beccae066 1133 main/binary-amd64/Packages.gz
+ 726e6e73a2085adbe67746122a520f590368fda5 2482 main/binary-amd64/Packages
+ b3962daa9c4fd94b600c6686a7f3b61a84f1477d 1133 main/binary-amd64/Packages.gz
  1d0b1e2a736dd3bd174d2de68caabcbe0f6bfd87 141 main/binary-amd64/Release
  4aa900b431c52a204b9e4de3742f96259cad695c 2438 main/binary-i386/Packages
  3ea71c16c10ec4caaa19f877cb866f5b049dbc44 1113 main/binary-i386/Packages.gz
@@ -29,8 +29,8 @@ SHA1:
  202867a93a45aabba9064eb789313755fc97aba3 1107 main/binary-armhf/Packages.gz
  d7c88675cb04fad8b59f2358f1f2f592a015c87e 141 main/binary-armhf/Release
 SHA256:
- b6a236d568acb8c7cd2613defe658ff40ceb57f4ea7fdb2b926bc0613750f7fc 2482 main/binary-amd64/Packages
- 513f5a84f4d9468ce385f4ff0443671e6b259315576ba2eb37347ca5bf8708f7 1133 main/binary-amd64/Packages.gz
+ b1f8879ea03704c900225802ff72114af7dc8d415421e39992ca8be4af7de169 2482 main/binary-amd64/Packages
+ d2dd75f631468fc9e09eca729d9833e977779285763c38eb6103caf9316f2107 1133 main/binary-amd64/Packages.gz
  269fd2d37e21926d2843716ceb264e640539e5976f3907e22d7aeafcf4528c3f 141 main/binary-amd64/Release
  8aac9a5b386ff9a34e64c8c02b69c79641f896f787837c546fcbda899e372db2 2438 main/binary-i386/Packages
  59fb6f93edb957508971ce4bd246d6ff957241ae6afd4d8e1305a3de5cb45646 1113 main/binary-i386/Packages.gz
@@ -41,11 +41,11 @@ SHA256:
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJW/+BfAAoJEEKe6eeHTAxZpjQH/RMB9q9OcE9tAYOHVF/LoFu5
-qLcQqqCVW8wS7rO02/VkZ3/VfLlO80XRzFTYkqu6BPI+uRlce5Cj1Pn7ANe1toNw
-APPPHZxww8M/BItyczast1boUxMxDzTha1jaDz9lsuvpG7Y8p8AOktCY4t5XbjB2
-hsAAzreGbDnf+AB3OouYV2+8AadhX7OlHljxws1pDBao9SHoydbiZEHZ+Cc3aR4a
-rr/KJfjh69/AjmCnM7EoQBXgrGamoGWXiP9Dbz0lhVkgsGquwFiMxl/iBtJfHkeF
-10hSb4hhPHH5EFegivapPpCojbcNm5uo+VsprZthrE1mwaz1qDPJc+PRnoXHVEk=
-=Dvop
+iQEcBAEBAgAGBQJXJZ2HAAoJEEKe6eeHTAxZlnkIALtFQTcc1yN45c5yTEtQAuC3
+vp3c+X9pbHz9OjJAO6nsFDQMCDW3uQ7YGWLvKRSqcrIdDBwx+LLMvTI+mNBkjMiB
+sN3jbyx5a0vuyb2ogq1/wgHPT1/AqaQqGLbUH7g+przxiBvIH+ugC5bVdzy9pRKU
+X6imzbxLkYLKLpLZNo9vURQ8/jZdpsFeN36SlkzQcHb4U5iEIZEI5OkNzz8b1zGF
+S0E0Myurpl3E+NLtPxAHqxXeME5//HOAjwLTsL14IsJUigq1broZsIv3Qr28KBmN
+XOwhBLLumXfn4LfBI3JC1mizBoZwO9J9xcZeL5xhyGNLHK6zkIcBCG6w5sN3y1I=
+=oPx4
 -----END PGP SIGNATURE-----
