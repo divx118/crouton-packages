@@ -14,8 +14,8 @@ echo "# This script will add the repo to your sources, download
 and install the kernel headers appropriate to your
 kernel version and architecture."
 apt-get install -y apt-transport-https
-wget -O - "https://raw.github.com/divx118/crouton-packages/$BRANCH/mauricevankruchten@gmail.com.gpg.key" | apt-key add -
-wget -O $TMP_DIST "https://raw.github.com/divx118/crouton-packages/$BRANCH/conf/distributions"
+wget -O - "https://raw.githubusercontent.com/divx118/crouton-packages/$BRANCH/mauricevankruchten@gmail.com.gpg.key" | apt-key add -
+wget -O $TMP_DIST "https://raw.githubusercontent.com/divx118/crouton-packages/$BRANCH/conf/distributions"
 KERNEL="`uname -r`"
 echo $KERNEL
 ARCH="`uname -m | sed -e 's i.86 i386 ;s arm.* arm ;s x86_64 amd64 ;'`"
@@ -42,7 +42,7 @@ if [ $supported -eq 0 ]; then
   exit 1
 fi
 # Adding the ppa to apt sources.
-echo "deb https://raw.github.com/divx118/crouton-packages/$BRANCH/ $KERNEL main" > /etc/apt/sources.list.d/crouton-packages.list
+echo "deb https://raw.githubusercontent.com/divx118/crouton-packages/$BRANCH/ $KERNEL main" > /etc/apt/sources.list.d/crouton-packages.list
 apt-get update
 # umount bindmounts /lib/modules from enter-chroot
 for m in `cat /proc/mounts | /usr/bin/cut -d ' ' -f2 | grep /lib/modules| grep -v "^/$" `; do
@@ -60,7 +60,7 @@ if [ -f /etc/rc.local ]; then
   echo "============================================================================"
   echo ""
 fi
-wget -O /etc/rc.local "https://raw.github.com/divx118/crouton-packages/$BRANCH/rc.local"
+wget -O /etc/rc.local "https://raw.githubusercontent.com/divx118/crouton-packages/$BRANCH/rc.local"
 chown root:root /etc/rc.local
 chmod +x /etc/rc.local
 echo ""
