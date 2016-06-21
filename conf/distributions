@@ -1,4 +1,4 @@
-Origin: apt.github.com
+Origin: apt.githubusercontent.com
 Label: apt repository
 Codename: 3.8.11
 Architectures: amd64 i386 armhf
