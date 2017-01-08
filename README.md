@@ -1,5 +1,7 @@
 This is a ubuntu/debian ppa for chromebook kernel headers.
 
+**Virtual box modules and the repo is currently broken https://github.com/divx118/crouton-packages/issues/45**
+
 Currently supported:
  * Kernel 3.4.0 Architecture arm, i386 and am64  ==> These all need testing.
  * Kernel 3.8.11 Architecture arm, i386 and am64 ==> amd64 is tested. i386 and arm needs testing.
