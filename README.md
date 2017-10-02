@@ -15,7 +15,14 @@ When you want to revert the changes so put back a backup kernel use -r
 **Note:** You will need to repeat the above steps after each chromeos update.
 
 
+=============================================================================
+
+ 
+  
+   
+   
 
 
-**Virtual box modules and the repo is currently broken https://github.com/divx118/crouton-packages/issues/45**
+
+**Virtual box modules and the repo is currently broken https://github.com/divx118/crouton-packages/issues/45 the change-kernel-flags script to disable "module_locking" mentioned above still works**
 
