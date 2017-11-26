@@ -44,9 +44,11 @@ APPLICATION="${0##*/}"
 
 # Default kernel flags. Check if we have support for vmx, so we add that too.
 KERNEL_FLAGS="lsm.module_locking=0"
-if grep -q '^flags\s*:.* vmx ' /proc/cpuinfo; then
-    KERNEL_FLAGS="$KERNEL_FLAGS disablevmx=off"
-fi
+# removing below default flag since it seems to cause some problems on the 
+# newest chromeos update.
+#if grep -q '^flags\s*:.* vmx ' /proc/cpuinfo; then
+#    KERNEL_FLAGS="$KERNEL_FLAGS disablevmx=off"
+#fi
 KERNEL_BACKUP_DIR="/mnt/stateful_partition/backups"
 
 USAGE="$APPLICATION [options] name [...]
